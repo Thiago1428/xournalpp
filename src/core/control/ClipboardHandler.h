@@ -12,6 +12,7 @@
 #pragma once
 
 #include <limits>  // for numeric_limits
+#include <memory>
 #include <string>  // for string
 
 #include <gdk-pixbuf/gdk-pixbuf.h>  // for GdkPixbuf
@@ -51,18 +52,21 @@ public:
 private:
     static void ownerChangedCallback(GtkClipboard* clip, GdkEvent* event, ClipboardHandler* handler);
     void clipboardUpdated(GdkAtom atom);
-    static void receivedClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData,
-                                          ClipboardHandler* handler);
+    static void receivedClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData, gpointer data);
 
     void dispatchPaste();
 
-    static void pasteClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData,
-                                       ClipboardHandler* handler);
-    static void pasteClipboardImage(GtkClipboard* clipboard, GdkPixbuf* pixbuf, ClipboardHandler* handler);
+    static void pasteClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData, gpointer data);
+    static void pasteClipboardImage(GtkClipboard* clipboard, GdkPixbuf* pixbuf, gpointer data);
 
-    static void pasteClipboardText(GtkClipboard* clipboard, const gchar* text, ClipboardHandler* handler);
+    static void pasteClipboardText(GtkClipboard* clipboard, const gchar* text, gpointer data);
 
 private:
+    struct CallbackState;
+    std::shared_ptr<CallbackState> callbackState;
+    gpointer createCallbackData() const;
+    static auto consumeCallbackData(gpointer data) -> std::shared_ptr<CallbackState>;
+
     ClipboardListener* listener = nullptr;
     GtkClipboard* clipboard = nullptr;
     gulong handlerId = std::numeric_limits<gulong>::max();

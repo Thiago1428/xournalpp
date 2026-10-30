@@ -17,8 +17,9 @@
 
 #include <gtk/gtk.h>  // for GtkWidget, Gtk...
 
-#include "model/DocumentChangeType.h"                  // for DocumentChange...
-#include "model/DocumentListener.h"                    // for DocumentListener
+#include "model/DocumentChangeType.h"  // for DocumentChange...
+#include "model/DocumentListener.h"    // for DocumentListener
+#include "util/raii/GSourceURef.h"
 
 class AbstractSidebarPage;
 class Control;
@@ -95,6 +96,7 @@ private:
 
 
 private:
+    xoj::util::GSourceURef delayedLayout;
     Control* control = nullptr;
 
     /**

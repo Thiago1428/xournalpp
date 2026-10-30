@@ -27,7 +27,24 @@ using std::string;
 
 ClipboardListener::~ClipboardListener() = default;
 
+struct ClipboardHandler::CallbackState {
+    explicit CallbackState(ClipboardHandler* handler): handler(handler) {}
+    ClipboardHandler* handler;
+};
+
+auto ClipboardHandler::createCallbackData() const -> gpointer {
+    return new std::weak_ptr<CallbackState>(callbackState);
+}
+
+auto ClipboardHandler::consumeCallbackData(gpointer data) -> std::shared_ptr<CallbackState> {
+    const std::unique_ptr<std::weak_ptr<CallbackState>> request(static_cast<std::weak_ptr<CallbackState>*>(data));
+    auto state = request->lock();
+    return state && state->handler ? state : nullptr;
+}
+
+
 ClipboardHandler::ClipboardHandler(ClipboardListener* listener, GtkWidget* widget) {
+    callbackState = std::make_shared<CallbackState>(this);
     this->listener = listener;
     this->clipboard = gtk_widget_get_clipboard(widget);
 
@@ -35,11 +52,16 @@ ClipboardHandler::ClipboardHandler(ClipboardListener* listener, GtkWidget* widge
 
     this->listener->clipboardCutCopyEnabled(false);
 
-    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"),
-                                   reinterpret_cast<GtkClipboardReceivedFunc>(receivedClipboardContents), this);
+    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"), receivedClipboardContents,
+                                   createCallbackData());
 }
 
-ClipboardHandler::~ClipboardHandler() { g_signal_handler_disconnect(this->clipboard, this->handlerId); }
+ClipboardHandler::~ClipboardHandler() {
+    // Pending GTK requests may finish after their window/controller has closed.
+    callbackState->handler = nullptr;
+    callbackState.reset();
+    g_signal_handler_disconnect(this->clipboard, this->handlerId);
+}
 
 static GdkAtom atomXournal = gdk_atom_intern_static_string("application/xournal");
 
@@ -50,8 +72,8 @@ auto ClipboardHandler::paste() -> bool {
      * See https://docs.gtk.org/gdk3/struct.EventOwnerChange.html and
      * https://gitlab.gnome.org/GNOME/gtk/-/issues/1757 */
     this->pastePending = true;
-    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"),
-                                   reinterpret_cast<GtkClipboardReceivedFunc>(receivedClipboardContents), this);
+    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"), receivedClipboardContents,
+                                   createCallbackData());
     return true;
 }
 
@@ -251,11 +273,17 @@ void ClipboardHandler::ownerChangedCallback(GtkClipboard* clip, GdkEvent* event,
 }
 
 void ClipboardHandler::clipboardUpdated(GdkAtom atom) {
-    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"),
-                                   reinterpret_cast<GtkClipboardReceivedFunc>(receivedClipboardContents), this);
+    gtk_clipboard_request_contents(clipboard, gdk_atom_intern_static_string("TARGETS"), receivedClipboardContents,
+                                   createCallbackData());
 }
 
-void ClipboardHandler::pasteClipboardImage(GtkClipboard* clipboard, GdkPixbuf* pixbuf, ClipboardHandler* handler) {
+void ClipboardHandler::pasteClipboardImage(GtkClipboard* clipboard, GdkPixbuf* pixbuf, gpointer data) {
+    const auto state = consumeCallbackData(data);
+    if (!state) {
+        return;
+    }
+    auto* handler = state->handler;
+
     if (pixbuf) {
         handler->listener->clipboardPasteImage(pixbuf);
     } else {
@@ -263,8 +291,13 @@ void ClipboardHandler::pasteClipboardImage(GtkClipboard* clipboard, GdkPixbuf* p
     }
 }
 
-void ClipboardHandler::pasteClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData,
-                                              ClipboardHandler* handler) {
+void ClipboardHandler::pasteClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData, gpointer data) {
+    const auto state = consumeCallbackData(data);
+    if (!state) {
+        return;
+    }
+    auto* handler = state->handler;
+
     ObjectInputStream in;
 
     if (in.read(reinterpret_cast<const char*>(gtk_selection_data_get_data(selectionData)),
@@ -273,7 +306,13 @@ void ClipboardHandler::pasteClipboardContents(GtkClipboard* clipboard, GtkSelect
     }
 }
 
-void ClipboardHandler::pasteClipboardText(GtkClipboard* clipboard, const gchar* text, ClipboardHandler* handler) {
+void ClipboardHandler::pasteClipboardText(GtkClipboard* clipboard, const gchar* text, gpointer data) {
+    const auto state = consumeCallbackData(data);
+    if (!state) {
+        return;
+    }
+    auto* handler = state->handler;
+
     if (text) {
         handler->listener->clipboardPasteText(text);
     }
@@ -298,7 +337,13 @@ auto gtk_selection_data_targets_include_xournal(GtkSelectionData* selection_data
 }
 
 void ClipboardHandler::receivedClipboardContents(GtkClipboard* clipboard, GtkSelectionData* selectionData,
-                                                 ClipboardHandler* handler) {
+                                                 gpointer data) {
+    const auto state = consumeCallbackData(data);
+    if (!state) {
+        return;
+    }
+    auto* handler = state->handler;
+
     handler->containsText = gtk_selection_data_targets_include_text(selectionData);
     handler->containsXournal = gtk_selection_data_targets_include_xournal(selectionData);
     handler->containsImage = gtk_selection_data_targets_include_image(selectionData, false);
@@ -306,7 +351,7 @@ void ClipboardHandler::receivedClipboardContents(GtkClipboard* clipboard, GtkSel
     handler->listener->clipboardPasteEnabled(handler->containsText || handler->containsXournal ||
                                              handler->containsImage);
 
-    if (handler->pastePending) {
+    if (state->handler && handler->pastePending) {
         handler->pastePending = false;
         handler->dispatchPaste();
     }
@@ -315,13 +360,10 @@ void ClipboardHandler::receivedClipboardContents(GtkClipboard* clipboard, GtkSel
 void ClipboardHandler::dispatchPaste() {
     // Priority: xournal native format > text > image
     if (this->containsXournal) {
-        gtk_clipboard_request_contents(this->clipboard, atomXournal,
-                                       reinterpret_cast<GtkClipboardReceivedFunc>(pasteClipboardContents), this);
+        gtk_clipboard_request_contents(this->clipboard, atomXournal, pasteClipboardContents, createCallbackData());
     } else if (this->containsText) {
-        gtk_clipboard_request_text(this->clipboard, reinterpret_cast<GtkClipboardTextReceivedFunc>(pasteClipboardText),
-                                   this);
+        gtk_clipboard_request_text(this->clipboard, pasteClipboardText, createCallbackData());
     } else if (this->containsImage) {
-        gtk_clipboard_request_image(this->clipboard,
-                                    reinterpret_cast<GtkClipboardImageReceivedFunc>(pasteClipboardImage), this);
+        gtk_clipboard_request_image(this->clipboard, pasteClipboardImage, createCallbackData());
     }
 }

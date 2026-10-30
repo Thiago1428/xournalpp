@@ -131,10 +131,16 @@ MainWindow::MainWindow(GladeSearchpath* gladeSearchPath, Control* control, GtkAp
         gtk_window_unmaximize(GTK_WINDOW(this->window));
     }
 
-    Util::execInUiThread([=]() {
-        // Execute after the window is visible, else the check won't work
-        control->setShowMenubar(control->getSettings()->isMenubarVisible());
-    });
+    delayedMenubarUpdate = gdk_threads_add_idle_full(
+            G_PRIORITY_DEFAULT_IDLE,
+            +[](gpointer data) -> gboolean {
+                auto* self = static_cast<MainWindow*>(data);
+                self->delayedMenubarUpdate.consume();
+                // Execute after the window is visible, else the check won't work.
+                self->control->setShowMenubar(self->control->getSettings()->isMenubarVisible());
+                return G_SOURCE_REMOVE;
+            },
+            this, nullptr);
 
     // Drag and Drop
     g_signal_connect(this->window, "drag-data-received", G_CALLBACK(dragDataRecived), this);
@@ -166,7 +172,10 @@ void MainWindow::populate(GladeSearchpath* gladeSearchPath) {
 
 GMenuModel* MainWindow::getMenuModel() const { return menubar->getModel(); }
 
-MainWindow::~MainWindow() = default;
+MainWindow::~MainWindow() {
+    delayedMenubarUpdate.cancel();
+    g_signal_handlers_disconnect_by_data(gtk_widget_get_settings(this->window), this);
+}
 
 struct ThemeProperties {
     bool dark;

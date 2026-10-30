@@ -76,7 +76,7 @@ void Sidebar::buttonClicked(GtkButton* button, SidebarTabButton* buttonData) {
 
 void Sidebar::addTab(std::unique_ptr<AbstractSidebarPage> tab) { this->tabs.push_back(std::move(tab)); }
 
-Sidebar::~Sidebar() = default;
+Sidebar::~Sidebar() { delayedLayout.cancel(); }
 
 void Sidebar::selectPageNr(size_t page, size_t pdfPage) {
     for (auto&& p: this->tabs) {
@@ -104,9 +104,10 @@ void Sidebar::setSelectedTab(size_t tab) {
         i++;
     }
     if (this->visibleTab) {
-        g_idle_add(
+        delayedLayout = g_idle_add(
                 [](gpointer data) -> gboolean {
                     Sidebar* sidebar = static_cast<Sidebar*>(data);
+                    sidebar->delayedLayout.consume();
                     sidebar->layout();
                     return G_SOURCE_REMOVE;
                 },

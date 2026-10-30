@@ -24,6 +24,7 @@
 
 #include "util/Point.h"
 #include "util/raii/GObjectSPtr.h"
+#include "util/raii/GSourceURef.h"
 
 #include "GladeGui.h"            // for GladeGui
 #include "ToolbarDefinitions.h"  // for TOOLBAR_DEFINITIONS_LEN
@@ -157,6 +158,7 @@ private:
 
 private:
     Control* control;
+    xoj::util::GSourceURef delayedMenubarUpdate;
 
     std::unique_ptr<XournalView> xournal;
     GtkWidget* winXournal = nullptr;
