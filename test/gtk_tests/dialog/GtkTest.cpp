@@ -6,8 +6,14 @@
 
 #include <cstdlib>
 
+#include "config-test.h"
+
 // Setting up the testing environment
 void GtkTest::SetUp() {
+    // Keep real catalogs available to every dialog fixture in this process.
+    if (!g_getenv("TEXTDOMAINDIR")) {
+        g_setenv("TEXTDOMAINDIR", GET_TEST_LOCALE_FOLDER, true);
+    }
     argn = 1;
     argv = new char*[2];
     argv[0] = strdup("xournalpp_test");

@@ -77,6 +77,27 @@ target_link_libraries (test-gtk-integration xoj::core xoj::util gtest_main gtest
 target_compile_features(test-gtk-integration PRIVATE cxx_std_20)
 target_include_directories(test-gtk-integration PRIVATE "${PROJECT_BINARY_DIR}/test")
 
+# Exercise real application catalogs, including every supported locale.
+set(test_locale_dir "${PROJECT_BINARY_DIR}/test/locale")
+file(GLOB test_po_files "${PROJECT_SOURCE_DIR}/po/*.po")
+set(test_catalogs)
+foreach(test_po_file IN LISTS test_po_files)
+  get_filename_component(test_locale "${test_po_file}" NAME_WE)
+  set(test_catalog "${test_locale_dir}/${test_locale}/LC_MESSAGES/${PROJECT_NAME}.mo")
+  add_custom_command(
+    OUTPUT "${test_catalog}"
+    COMMAND "${CMAKE_COMMAND}" -E make_directory "${test_locale_dir}/${test_locale}/LC_MESSAGES"
+    COMMAND "${GETTEXT_MSGFMT_EXECUTABLE}" --check --check-format
+            -o "${test_catalog}" "${test_po_file}"
+    DEPENDS "${test_po_file}"
+    VERBATIM
+  )
+  list(APPEND test_catalogs "${test_catalog}")
+endforeach()
+add_custom_target(test-translations DEPENDS ${test_catalogs})
+add_dependencies(test-gtk-integration test-translations)
+
+
 ###############################################################################
 # Discover and Register Tests
 ###############################################################################
