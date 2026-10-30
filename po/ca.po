@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "Language: ca_ES\n"
@@ -4854,3 +4854,39 @@ msgstr "Fitxer de notes Xournal++"
 msgid "Xournal++ page template file"
 msgstr "Fitxer de plantilla de pàgina Xournal++"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Esborra gargotejant"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Activa l'esborrament amb gargots"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Esborra traços sencers de la capa actual gargotejant-hi al damunt amb l'eina Llapis. Desfés restaura els traços esborrats."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Configuració avançada"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Sensibilitat del reconeixement (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Els valors més alts accepten gargots menys regulars, però poden esborrar dibuixos normals per error. Valor per defecte: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Passades mínimes"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Cada moviment en una direcció compta com una passada. Els valors més baixos requereixen menys moviments, però poden esborrar dibuixos normals per error. En passar per diversos elements, poden caldre passades addicionals. Valor per defecte: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Restaura els valors per defecte"

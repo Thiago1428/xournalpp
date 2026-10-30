@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "Language: da_DK\n"
@@ -4751,3 +4751,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Slet ved at kradse over"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Aktivér sletning ved at kradse over"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Slet hele streger på det aktuelle lag ved at kradse over dem med penværktøjet. Fortryd gendanner de slettede streger."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Avancerede indstillinger"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Genkendelsesfølsomhed (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Højere værdier accepterer mere uregelmæssige kradserier, men kan slette almindelige tegninger ved en fejl. Standard: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Mindste antal strøg"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Hver bevægelse i én retning tæller som ét strøg. Lavere værdier kræver færre bevægelser, men kan slette almindelige tegninger ved en fejl. Når du bevæger dig hen over flere elementer, kan ekstra strøg være nødvendige. Standard: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Gendan standardværdier"

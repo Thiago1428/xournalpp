@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -4839,3 +4839,39 @@ msgstr "File di note Xournal++"
 msgid "Xournal++ page template file"
 msgstr "File modello pagina Xournal++"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Cancella scarabocchiando"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Abilita la cancellazione con scarabocchi"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Cancella tratti interi del livello corrente scarabocchiandoci sopra con lo strumento Penna. Annulla ripristina i tratti cancellati."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Impostazioni avanzate"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Sensibilità del riconoscimento (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Valori più alti accettano scarabocchi meno regolari, ma possono cancellare per errore disegni normali. Valore predefinito: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Passaggi minimi"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Ogni movimento in una direzione conta come un passaggio. Valori più bassi richiedono meno movimenti, ma possono cancellare per errore disegni normali. Attraversare più elementi può richiedere passaggi aggiuntivi. Valore predefinito: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Ripristina valori predefiniti"

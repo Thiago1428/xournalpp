@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -4771,3 +4771,39 @@ msgstr "קובץ פתקית של Xournal++‎"
 msgid "Xournal++ page template file"
 msgstr "קובץ תבנית עמוד של Xournal++‎"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "מחיקה באמצעות שרבוט"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "הפעלת מחיקה באמצעות שרבוט"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "מחיקת משיכות שלמות בשכבה הנוכחית באמצעות שרבוט מעליהן בכלי העט. ביטול משחזר את המשיכות שנמחקו."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "הגדרות מתקדמות"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "רגישות הזיהוי (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "ערכים גבוהים יותר מאפשרים שרבוטים פחות סדירים, אך עלולים למחוק ציורים רגילים בטעות. ברירת מחדל: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "מספר מעברים מזערי"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "כל תנועה בכיוון אחד נספרת כמעבר אחד. ערכים נמוכים יותר דורשים פחות תנועות, אך עלולים למחוק ציורים רגילים בטעות. מעבר מעל כמה פריטים עשוי לדרוש מעברים נוספים. ברירת מחדל: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "שחזור ברירות המחדל"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -4858,3 +4858,39 @@ msgstr "Xournal++ 笔记文件"
 msgid "Xournal++ page template file"
 msgstr "Xournal++ 页面模板文件"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "涂划擦除"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "启用涂划擦除"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "使用画笔工具在笔画上来回涂划，可擦除当前图层的整条笔画。撤销可恢复被擦除的笔画。"
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "高级设置"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "识别灵敏度 (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "数值越高，越能识别不规则的涂划，但可能误擦普通绘图。默认值：50。"
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "最少划动次数"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "每次朝一个方向的移动计为一次划动。数值越低，所需移动越少，但可能误擦普通绘图。划过多个目标时可能需要额外划动。默认值：4。"
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "恢复默认值"

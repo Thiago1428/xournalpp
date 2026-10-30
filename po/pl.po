@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -4792,3 +4792,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Wymazywanie przez bazgranie"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Włącz wymazywanie przez bazgranie"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Wymazuj całe pociągnięcia na bieżącej warstwie, bazgrząc po nich narzędziem Pióro. Cofnij przywraca wymazane pociągnięcia."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Ustawienia zaawansowane"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Czułość rozpoznawania (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Wyższe wartości pozwalają rozpoznawać mniej regularne bazgroły, ale mogą powodować omyłkowe wymazywanie zwykłych rysunków. Wartość domyślna: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Minimalna liczba przejść"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Każdy ruch w jednym kierunku liczy się jako jedno przejście. Niższe wartości wymagają mniej ruchów, ale mogą powodować omyłkowe wymazywanie zwykłych rysunków. Przesuwanie po kilku elementach może wymagać dodatkowych przejść. Wartość domyślna: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Przywróć wartości domyślne"

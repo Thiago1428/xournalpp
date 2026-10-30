@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -4859,3 +4859,39 @@ msgstr "Fichier de note Xournal++"
 msgid "Xournal++ page template file"
 msgstr "Fichier-modèle de page Xournal++"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Effacer en gribouillant"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Activer l'effacement par gribouillage"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Effacez des traits entiers sur le calque actuel en gribouillant dessus avec l'outil Stylo. Annuler restaure les traits effacés."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Paramètres avancés"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Sensibilité de la reconnaissance (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Les valeurs élevées acceptent des gribouillages moins réguliers, mais peuvent effacer des dessins ordinaires par erreur. Valeur par défaut : 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Nombre minimal de passages"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Chaque mouvement dans une direction compte comme un passage. Les valeurs faibles demandent moins de mouvements, mais peuvent effacer des dessins ordinaires par erreur. Parcourir plusieurs éléments peut nécessiter des passages supplémentaires. Valeur par défaut : 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Rétablir les valeurs par défaut"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Bengali\n"
 "Language: bn_BD\n"
@@ -4733,3 +4733,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "হিজিবিজি এঁকে মোছা"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "হিজিবিজি এঁকে মোছা চালু করুন"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "কলম সরঞ্জাম দিয়ে দাগের ওপর হিজিবিজি এঁকে বর্তমান স্তর থেকে সম্পূর্ণ দাগ মুছুন। পূর্বাবস্থায় ফেরালে মোছা দাগগুলো ফিরে আসে।"
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "উন্নত সেটিংস"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "শনাক্তকরণের সংবেদনশীলতা (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "বেশি মান দিলে কম নিয়মিত হিজিবিজিও শনাক্ত হয়, তবে সাধারণ আঁকাও ভুল করে মুছে যেতে পারে। ডিফল্ট: 50।"
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "ন্যূনতম টানের সংখ্যা"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "এক দিকে প্রতিটি নড়াচড়া একটি টান হিসেবে গণনা করা হয়। কম মানে কম নড়াচড়া লাগে, তবে সাধারণ আঁকাও ভুল করে মুছে যেতে পারে। একাধিক বস্তুর ওপর দিয়ে গেলে বাড়তি টান লাগতে পারে। ডিফল্ট: 4।"
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "ডিফল্ট মান ফিরিয়ে আনুন"

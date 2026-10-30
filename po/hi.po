@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -4748,3 +4748,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "आड़ी-तिरछी रेखाएँ खींचकर मिटाएँ"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "आड़ी-तिरछी रेखाएँ खींचकर मिटाना सक्षम करें"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "कलम उपकरण से रेखाओं के ऊपर आड़ी-तिरछी रेखाएँ खींचकर वर्तमान परत की पूरी रेखाएँ मिटाएँ। पूर्ववत करने से मिटाई गई रेखाएँ वापस आती हैं।"
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "उन्नत सेटिंग्स"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "पहचान की संवेदनशीलता (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "अधिक मान कम नियमित आड़ी-तिरछी रेखाओं को भी पहचानते हैं, लेकिन सामान्य चित्र गलती से मिट सकते हैं। डिफ़ॉल्ट: 50।"
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "न्यूनतम फेरों की संख्या"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "एक दिशा में हर गति को एक फेरा गिना जाता है। कम मान के लिए कम गतियाँ चाहिए, लेकिन सामान्य चित्र भी गलती से मिट सकते हैं। कई वस्तुओं के ऊपर जाने पर अतिरिक्त फेरे आवश्यक हो सकते हैं। डिफ़ॉल्ट: 4।"
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "डिफ़ॉल्ट मान बहाल करें"

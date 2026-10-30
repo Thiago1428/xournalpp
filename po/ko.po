@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -4762,3 +4762,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "낙서로 지우기"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "낙서로 지우기 활성화"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "펜 도구로 획 위에 낙서하여 현재 레이어의 획 전체를 지웁니다. 되돌리기로 지운 획을 복원할 수 있습니다."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "고급 설정"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "인식 민감도 (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "값이 높을수록 불규칙한 낙서도 인식하지만, 일반 그림을 실수로 지울 수 있습니다. 기본값: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "최소 이동 횟수"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "한 방향으로 움직일 때마다 1회로 계산합니다. 값이 낮을수록 적은 움직임이 필요하지만, 일반 그림을 실수로 지울 수 있습니다. 여러 대상을 가로지르면 추가 움직임이 필요할 수 있습니다. 기본값: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "기본값 복원"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -4762,3 +4762,39 @@ msgstr "Xournal++ ノートファイル"
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "なぐり書きで消去"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "なぐり書きでの消去を有効にする"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "ペンツールで線の上をなぐり書きすると、現在のレイヤーの線全体を消去します。「元に戻す」で消去した線を復元できます。"
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "詳細設定"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "認識感度 (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "値を高くすると不規則ななぐり書きも認識しますが、通常の描画を誤って消去することがあります。既定値: 50。"
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "最小移動回数"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "一方向への動きを1回と数えます。値を低くすると少ない動きで認識しますが、通常の描画を誤って消去することがあります。複数の対象をまたぐ場合は、追加の動きが必要になることがあります。既定値: 4。"
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "既定値に戻す"

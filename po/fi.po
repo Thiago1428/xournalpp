@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
@@ -4735,3 +4735,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Poistaminen sutaten"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Ota käyttöön poistaminen sutaten"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Poista nykyisen tason kokonaisia viivoja sutaten niiden päällä Kynä-työkalulla. Kumoa palauttaa poistetut viivat."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Lisäasetukset"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Tunnistuksen herkkyys (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Suuremmat arvot hyväksyvät epäsäännöllisempiä sutauksia, mutta voivat poistaa tavallista piirrosta vahingossa. Oletus: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Vetojen vähimmäismäärä"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Jokainen liike yhteen suuntaan lasketaan yhdeksi vedoksi. Pienemmät arvot vaativat vähemmän liikkeitä, mutta voivat poistaa tavallista piirrosta vahingossa. Usean kohteen yli liikkuminen voi vaatia lisävetoja. Oletus: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Palauta oletusarvot"

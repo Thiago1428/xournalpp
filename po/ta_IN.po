@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Tamil\n"
 "Language: ta_IN\n"
@@ -4733,3 +4733,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "கிறுக்கி அழித்தல்"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "கிறுக்கி அழித்தலை இயக்கு"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "பேனா கருவியால் கோடுகளின் மேல் கிறுக்கி, தற்போதைய அடுக்கிலுள்ள முழுக் கோடுகளையும் அழிக்கவும். செயல்தவிர்ப்பது அழித்த கோடுகளை மீட்டெடுக்கும்."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "மேம்பட்ட அமைப்புகள்"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "அறிதல் உணர்திறன் (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "அதிக மதிப்புகள் ஒழுங்கற்ற கிறுக்கல்களையும் ஏற்கும், ஆனால் சாதாரண வரைபடங்களைத் தவறுதலாக அழிக்கலாம். இயல்புநிலை: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "குறைந்தபட்ச நகர்வுகள்"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "ஒரு திசையில் செய்யும் ஒவ்வொரு நகர்வும் ஒன்றாகக் கணக்கிடப்படும். குறைந்த மதிப்புகளுக்குக் குறைவான நகர்வுகளே தேவை, ஆனால் சாதாரண வரைபடங்களைத் தவறுதலாக அழிக்கலாம். பல உருப்படிகளின் மீது செல்லும்போது கூடுதல் நகர்வுகள் தேவைப்படலாம். இயல்புநிலை: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "இயல்புநிலைகளை மீட்டமை"

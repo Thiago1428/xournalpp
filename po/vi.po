@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -4756,3 +4756,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Xóa bằng nét nguệch ngoạc"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Bật xóa bằng nét nguệch ngoạc"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Xóa toàn bộ nét trên lớp hiện tại bằng cách vẽ nguệch ngoạc lên chúng bằng công cụ Bút. Hoàn tác khôi phục các nét đã xóa."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Cài đặt nâng cao"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Độ nhạy nhận dạng (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Giá trị cao hơn chấp nhận các nét nguệch ngoạc ít đều hơn, nhưng có thể xóa nhầm hình vẽ thông thường. Mặc định: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Số lượt tối thiểu"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Mỗi chuyển động theo một hướng được tính là một lượt. Giá trị thấp hơn cần ít chuyển động hơn, nhưng có thể xóa nhầm hình vẽ thông thường. Di chuyển qua nhiều đối tượng có thể cần thêm lượt. Mặc định: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Khôi phục mặc định"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Sinhala\n"
 "Language: si_LK\n"
@@ -4733,3 +4733,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "කුරුටු ගා මකන්න"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "කුරුටු ගා මැකීම සක්‍රිය කරන්න"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "පෑන මෙවලමෙන් රේඛා මත කුරුටු ගා වත්මන් ස්තරයේ සම්පූර්ණ රේඛා මකන්න. ආපසු හැරවීමෙන් මකා දැමූ රේඛා නැවත ලබාගත හැකිය."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "උසස් සැකසුම්"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "හඳුනාගැනීමේ සංවේදීතාව (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "ඉහළ අගයන් අඩු පිළිවෙළක් ඇති කුරුටු ද හඳුනාගනී, නමුත් සාමාන්‍ය චිත්‍ර වැරදීමකින් මැකිය හැකිය. පෙරනිමිය: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "අවම චලන ගණන"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "එක් දිශාවකට කරන සෑම චලනයක්ම එකක් ලෙස ගණන් ගැනේ. අඩු අගයන්ට අඩු චලන ගණනක් අවශ්‍ය වේ, නමුත් සාමාන්‍ය චිත්‍ර වැරදීමකින් මැකිය හැකිය. අයිතම කිහිපයක් හරහා යන විට අමතර චලන අවශ්‍ය විය හැකිය. පෙරනිමිය: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "පෙරනිමි අගයන් ප්‍රතිස්ථාපනය කරන්න"

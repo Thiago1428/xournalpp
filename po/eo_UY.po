@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
@@ -4763,3 +4763,39 @@ msgstr ""
 msgid "Xournal++ page template file"
 msgstr ""
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Forviŝi per skribaĉado"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Ebligi forviŝadon per skribaĉado"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Forviŝu tutajn strekojn sur la nuna tavolo skribaĉante super ili per la ilo Plumo. Malfari restarigas la forviŝitajn strekojn."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Altnivelaj agordoj"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Sentemo de rekono (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Pli altaj valoroj akceptas malpli regulajn skribaĉojn, sed povas erare forviŝi ordinarajn desegnaĵojn. Defaŭlto: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Minimumaj pasoj"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Ĉiu movo en unu direkto kalkuliĝas kiel unu paso. Pli malaltaj valoroj bezonas malpli da movoj, sed povas erare forviŝi ordinarajn desegnaĵojn. Movado super pluraj celoj povas bezoni kromajn pasojn. Defaŭlto: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Restarigi defaŭltojn"

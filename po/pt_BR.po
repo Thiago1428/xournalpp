@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 13:35-0800\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
@@ -4823,3 +4823,39 @@ msgstr "Arquivo de nota do Xournal++"
 msgid "Xournal++ page template file"
 msgstr "Arquivo de Página de Molde do Xournal++"
 
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Ativar apagamento por rabiscos"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Apaga traços inteiros da camada atual ao rabiscar sobre eles com a ferramenta Caneta. Desfazer restaura os traços apagados."
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Apagar com rabiscos"
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Configurações avançadas"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Sensibilidade do reconhecimento (0–100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Valores maiores aceitam rabiscos menos regulares, mas podem apagar desenhos comuns por engano. Padrão: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Passagens mínimas"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Cada movimento em uma direção conta como uma passagem. Valores menores exigem menos movimentos, mas podem apagar desenhos comuns por engano. Ao percorrer vários alvos, podem ser necessárias passagens extras. Padrão: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Restaurar padrões"

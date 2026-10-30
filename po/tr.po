@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:44\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -4815,3 +4815,39 @@ msgstr "Xournal++ not dosyası"
 msgid "Xournal++ page template file"
 msgstr "Xournal++ sayfa şablon dosyası"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Karalayarak sil"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Karalayarak silmeyi etkinleştir"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "Kalem aracıyla üzerlerini karalayarak geçerli katmandaki çizgilerin tamamını silin. Geri al, silinen çizgileri geri getirir."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Gelişmiş ayarlar"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Tanıma hassasiyeti (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "Daha yüksek değerler daha düzensiz karalamaları kabul eder, ancak normal çizimleri yanlışlıkla silebilir. Varsayılan: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "En az geçiş sayısı"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Bir yöndeki her hareket bir geçiş sayılır. Daha düşük değerler daha az hareket gerektirir, ancak normal çizimleri yanlışlıkla silebilir. Birden fazla öğenin üzerinden geçerken ek geçişler gerekebilir. Varsayılan: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Varsayılanları geri yükle"

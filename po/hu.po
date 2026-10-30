@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xournalpp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 11:55+0000\n"
-"PO-Revision-Date: 2026-09-23 09:43\n"
+"PO-Revision-Date: 2026-10-29 17:53-0800\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -4853,3 +4853,39 @@ msgstr "Xournal++-jegyzetfájl"
 msgid "Xournal++ page template file"
 msgstr "Xournal++-oldalsablonfájl"
 
+
+#: ../ui/settings.glade:5538
+msgid "Scribble to Erase"
+msgstr "Törlés firkálással"
+
+#: ../ui/settings.glade:5435
+msgid "Enable scribble to erase"
+msgstr "Firkálással való törlés engedélyezése"
+
+#: ../ui/settings.glade:5439
+msgid "Erase entire strokes on the current layer by scribbling over them with the Pen tool. Undo restores the erased strokes."
+msgstr "A Toll eszközzel ráfirkálva teljes vonások törölhetők az aktuális rétegről. A Visszavonás visszaállítja a törölt vonásokat."
+
+#: ../ui/settings.glade:5447
+msgid "Advanced settings"
+msgstr "Speciális beállítások"
+
+#: ../ui/settings.glade:5462
+msgid "Recognition sensitivity (0-100)"
+msgstr "Felismerési érzékenység (0-100)"
+
+#: ../ui/settings.glade:5481
+msgid "Higher values accept less regular scribbles, but can erase ordinary drawing by mistake. Default: 50."
+msgstr "A nagyobb értékek szabálytalanabb firkákat is elfogadnak, de véletlenül hagyományos rajzokat is törölhetnek. Alapérték: 50."
+
+#: ../ui/settings.glade:5495
+msgid "Minimum passes"
+msgstr "Áthaladások minimális száma"
+
+#: ../ui/settings.glade:5514
+msgid "Each movement in one direction counts as one pass. Lower values need fewer movements, but can erase ordinary drawing by mistake. Moving across several targets may need extra passes. Default: 4."
+msgstr "Minden egy irányba történő mozdulat egy áthaladásnak számít. A kisebb értékek kevesebb mozdulatot igényelnek, de véletlenül hagyományos rajzokat is törölhetnek. Több elem érintése további áthaladásokat igényelhet. Alapérték: 4."
+
+#: ../ui/settings.glade:5525
+msgid "Restore defaults"
+msgstr "Alapértékek visszaállítása"
